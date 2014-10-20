@@ -6,8 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route( 'dropbox-oauth2' );
+    this.route( 'dropbox-login' );
     this.route( 'dropbox-account' );
+    this.route( 'dropbox-metadata' );
+    this.route( 'dropbox-logout' );
 });
 
 export default Router;

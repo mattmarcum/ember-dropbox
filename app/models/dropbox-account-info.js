@@ -1,5 +1,3 @@
-import DS from 'ember-data';
+import DropboxAccountInfo from 'ember-dropbox/models/dropbox-account-info';
 
-export default DS.Model.extend({
-    uid: DS.attr( 'string' )  
-});
+export default DropboxAccountInfo;

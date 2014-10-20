@@ -1,7 +1,3 @@
-import DBA from './dropbox';
+import DropboxAccountInfo from 'ember-dropbox/adapters/dropbox-account-info';
 
-export default DBA.extend({
-    pathForType: function( type ){
-        return 'account/info';
-    }
-});
+export default DropboxAccountInfo; 

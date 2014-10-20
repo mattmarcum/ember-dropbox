@@ -1,4 +1,3 @@
-import Ember from 'ember';
-import DropboxOauth2Route from 'ember-dropbox/routes/dropbox-oauth2';
+import DropboxLogin from 'ember-dropbox/routes/dropbox-login';
 
-export default DropboxOauth2Route;
+export default DropboxLogin;

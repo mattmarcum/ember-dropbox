@@ -1,0 +1,15 @@
+<h1>Dropbox Folders</h1>
+<dl>
+    <dt>path</dt><dd>{{model.path}}</dd>
+    <dt>is folder</dt><dd>{{model.is_dir}}</dd>
+    <dt>size</dt><dd>{{model.size}}</dd>
+    {{#each submodel in model.dropbox-metadata }}
+    <dl>
+     <dt>path</dt><dd>{{submodel.path}}</dd>
+     <dt>is folder</dt><dd>{{submodel.is_dir}}</dd>
+     <dt>size</dt><dd>{{submodel.size}}</dd>
+    </dl>
+    {{/each}}
+</dl>
+<p>{{#link-to 'dropbox-account'}}Account{{/link-to}}</p>
+<p>{{#link-to 'dropbox-logout'}}Logout of dropbox{{/link-to}}</p>

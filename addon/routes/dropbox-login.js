@@ -7,13 +7,13 @@ export default Ember.Route.extend( Ember.Evented, {
         self.on('auth', function( hash ){
             var params = parseCallback( hash );
 
-            window.dropboxToken = params.access_token ;
+            window.localStorage.dropboxToken = params.access_token ;
         });
   
     }.on( 'init' ),
     
     actions: {
-        'start-dropbox-oauth2': function(){
+        'dropbox-login': function(){
             var self = this,
                 url = 'https://www.dropbox.com/1/oauth2/authorize?client_id='+
                 EmberENV.dropbox.clientId +

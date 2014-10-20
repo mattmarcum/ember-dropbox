@@ -1,1 +1,8 @@
 <h1>Dropbox Account</h1>
+<dl>
+    <dt>uid</dt><dd>{{model.uid}}</dd>
+    <dt>name</dt><dd>{{model.display_name}}</dd>
+    <dt>email</dt><dd>{{model.email}}</dd>
+</dl>
+<p>{{#link-to 'dropbox-metadata'}}List of Files/Folders{{/link-to}}</p>
+<p>{{#link-to 'dropbox-logout'}}Logout of dropbox{{/link-to}}</p>

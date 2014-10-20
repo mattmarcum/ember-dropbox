@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import DropboxOauth2 from 'ember-dropbox/routes/dropbox-oauth2';
+import DropboxLoginRoute from 'ember-dropbox/routes/dropbox-login';
 
-export default DropboxOauth2.extend({  
+export default DropboxLoginRoute.extend({  
     redirectSetup: function(){
         var self = this;
         self.on( 'auth', function(){
