@@ -7,6 +7,11 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
+      dropbox: {
+        clientId: 'odff61i39m01n2o',
+        redirectURI: 'http://localhost:4200/dropbox-callback.html'
+      },
+
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
@@ -43,5 +48,8 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'dropbox' https://api.dropbox.com", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+  };
   return ENV;
 };
